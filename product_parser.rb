@@ -36,7 +36,6 @@ class ProductParser
   end
 
   def self.generate_products_list(product_name, weights, prices, images_links)
-    LoggingUtils.log("------------")
     products = []
     weights.each_index do |index|
       weight = weights[index]
@@ -52,7 +51,6 @@ class ProductParser
       product = Product.new(product_name + " - " + weight, price, image_link)
       products.push(product)
     end
-    LoggingUtils.log("-===============-")
     products
   end
 
